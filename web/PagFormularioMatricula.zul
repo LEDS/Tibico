@@ -1,0 +1,83 @@
+<?page title="Formulário Matrícula"?>
+<zk>
+    <div align="center">
+        <window title="Página Formulário Matrícula" id="winFormularioMatricula" action="show: slideDown;hide: slideUp" mode="modal" position="center"
+                closable="true" sclass="windowStyle" border="normal" width="60%" apply="academico.controlepauta.cih.PagFormularioMatricula">
+            <separator height="35px" />
+            <div align="left">
+                <space width="10px"/>
+                Aluno:
+                <textbox id="nomeAluno" width="50%"/>
+            </div>
+            <separator height="35px" />
+            <columnlayout>
+                <columnchildren width="50%">
+                    <panel title="Disciplinas disponíveis para matrícula:">
+                        <panelchildren>
+                            <listbox id="left" multiple="true" height="300px"
+                                     oddRowSclass="non-odd" checkmark="true"/>
+                        </panelchildren>
+                    </panel>
+                </columnchildren>
+                <columnchildren width="100px">
+                    <panel>
+                        <panelchildren style="margin: 70px 34px;">
+                            <image sclass="pointer" tooltiptext="Add Project"
+                                   src="/img/ButtonArrowRight.jpg">
+                                <attribute name="onClick"><![CDATA[
+			                            Set items = left.getSelectedItems();
+			                            if (items.isEmpty()) {
+			                                alert("Selecione uma turma para matricular-se!");
+			                            } else {
+			                                List al = new ArrayList(items);
+			                                for (Iterator it = al.iterator(); it.hasNext();) {
+			                                    Listitem li = (Listitem)it.next();
+			                                    li.setSelected(false);
+			                                    right.appendChild(li);
+			                                }
+			                            }
+			                        ]]>
+                                </attribute>
+                            </image>
+                            <separator height="15px"/>
+                            <image sclass="pointer" tooltiptext="Remove Project"
+                                   src="/img/ButtonArrowLeft.jpg">
+                                <attribute name="onClick"><![CDATA[
+			                            Set items = right.getSelectedItems();
+			                            if (items.isEmpty()) {
+			                                alert("Selecione uma Turma!");
+			                            } else {
+			                                List al = new ArrayList(items);
+			                                for (Iterator it = al.iterator(); it.hasNext();) {
+			                                    Listitem li = (Listitem)it.next();
+			                                    li.setSelected(false);
+			                                    left.appendChild(li);
+			                                }
+			                            }
+			                        ]]>
+                                </attribute>
+                            </image>
+                        </panelchildren>
+                    </panel>
+                </columnchildren>
+                <columnchildren width="50%">
+                    <panel title="Disciplinas escolhidas para matrícula:">
+                        <panelchildren>
+                            <listbox id="right" multiple="true" height="300px"
+                                     oddRowSclass="non-odd" checkmark="true"/>
+                        </panelchildren>
+                    </panel>
+                </columnchildren>
+            </columnlayout>
+		    
+            <separator/>
+		    
+            <button width="10%" label="Salvar" id="salvarMatricula"></button>
+            <button width="10%" label="Voltar" id="voltar"></button>
+		    
+        <style src="/information.css"/>            
+        </window>
+    </div>
+</zk>
+
+

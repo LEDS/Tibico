@@ -1,0 +1,50 @@
+<?page title="Eventos Curso"?>
+
+<zk>
+    <window title="Cursos Cadastrados" border="normal" closable="true" sclass="windowStyle"
+            width="50%" id="winEventosCurso" apply ="academico.controleinterno.cih.PagEventosCurso">
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+
+            <menubar>
+                <menuitem tooltiptext="Incluir um Curso"
+                          label="Incluir" width="20%" id="incluirCurso"/>
+                <menuitem tooltiptext="Alterar um Curso"
+                          label="Alterar" width="20%" id="alterarCurso"/>
+                <menuitem tooltiptext="Consultar um Curso"
+                          label="Consultar" width="20%" id="consultarCurso"/>
+                <menuitem tooltiptext="Excluir um Curso"
+                          label="Excluir" width="20%" id="excluirCurso"/>
+            </menubar>
+
+            <div id="boxInformacao" class="" visible="true" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+
+            <separator />
+            <separator />
+
+            
+
+            <auxhead>
+                <auxheader align="center"
+                           label="Cursos Cadastrados" />
+            </auxhead>
+
+            <separator />
+                        
+            <listbox id="listCurso" mold="paging">
+                <listhead>
+                    <listheader align="center" label="Nome" />
+                    <listheader align="center" label="Grau Instrução" />
+                    <listheader align="center" label="Duração" />
+                </listhead>
+            </listbox>
+        </div>
+        <style src="/information.css"/>
+    </window>
+
+    
+</zk>
+
+

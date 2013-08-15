@@ -1,0 +1,72 @@
+<?page title="Eventos Aluno"?>
+
+<zk>
+  
+    <window id="winDadosAluno" title="Aluno(s) Cadastrado(s)" border="normal" closable="true"
+            width="50%" apply = "academico.controleinterno.cih.PagEventosAluno" sclass="windowStyle">
+                
+        <div align="center">                    
+ 
+        <image src="images/tibico6.png" width="30%" height="20%"/>
+            
+             
+            
+            <menubar>
+                <menuitem tooltiptext="Incluir um Aluno"
+                          label="Incluir" width="20%" id="incluirAluno"/>
+                <menuitem tooltiptext="Alterar um Aluno"
+                          label="Alterar" width="20%" id="alterarAluno"/>
+                <menuitem tooltiptext="Consultar um Aluno"
+                          label="Consultar" width="20%" id="consultarAluno"/>
+                <menuitem tooltiptext="Excluir um Aluno"
+                          label="Excluir" width="20%" id="excluirAluno"/>
+            </menubar>
+
+           
+            
+            <grid>
+                <columns>
+                    <column label="" width="5%"/>
+                    <column label="" width="65%"/>
+                    <column label="" width="30%"/>
+                </columns>
+                <rows>
+      
+                    <row>
+                        Curso:
+                        <combobox id="curso" width="60%" readonly="true"/>
+                        <textbox  id="pesquisarNome" width="100%" instant="true" value="Pesquisar"/>
+                    </row>
+                      
+                </rows>
+            </grid>
+            
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+            
+            <separator />
+            <separator />
+
+            <auxhead>
+                <auxheader align="center"
+                           label="Aluno(s) Cadastrado(s)" />
+            </auxhead>
+
+            <separator />
+
+            <listbox id="listAluno" mold="paging">
+                <listhead>
+                    <listheader align="center" label="Matricula" />
+                    <listheader align="center" label="Nome" />
+                    <listheader align="center" label="Curso" />
+                </listhead>
+            </listbox>
+        </div>
+        <style src="/information.css"/>
+    </window>
+    
+
+
+
+</zk>

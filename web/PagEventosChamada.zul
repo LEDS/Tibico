@@ -1,0 +1,62 @@
+<?page title="Eventos Chamada"?>
+
+<zk>
+    <window id="winEventosChamada" title="Chamadas Cadastradas" border="normal" closable="true" 
+            width="50%" apply="academico.controlepauta.cih.PagEventosChamada" sclass="windowStyle">
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+            <grid>
+                <columns>
+                    <column width="10%" label=""/>
+                    <column width="90%" label=""/>
+                </columns>
+                <rows>		
+                    <row>			
+                        Turma: 		 
+                        <combobox id="nome" width="30%"/>
+                    </row>		
+                </rows>
+            </grid>
+			
+			
+
+            <menubar>
+                <menuitem id="incluir" tooltiptext="Incluir Chamada" label="Incluir"/>
+                <menuitem id="alterar" tooltiptext="Alterar Chamada" label="Alterar"/>
+                <menuitem id="consultar" tooltiptext="Consultar Chamada" label="Consultar"/>
+                <menuitem id="excluir" tooltiptext="Excluir Chamda" label="Excluir"/>
+            </menubar>
+            
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+            
+            <separator />
+            <separator />
+
+            <auxhead>
+                <auxheader align="center"
+                           label="Chamadas Cadastradas" />
+            </auxhead>
+
+            <separator />
+
+			                        
+            <listbox id = "listbox" mold="paging">
+                <listhead>
+                    <listheader label="Data"/>
+                    <listheader label="Conteúdo"/>
+                    <listheader label="Quantidade de Aulas"/>
+                </listhead>
+
+            </listbox>
+
+        </div>
+        <style src="/information.css"/>
+    </window>
+	
+	
+
+</zk>
+
+

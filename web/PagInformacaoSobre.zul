@@ -1,0 +1,33 @@
+<?page title="Sobre o Projeto Tibico" contentType="text/html;charset=UTF-8"?>
+
+<zk>
+    <style>
+        .imagem {padding-right: 10px}
+    </style>
+    
+    <div align="center">
+        <window title="Sobre o Projeto Tibico" border="normal" closable="true" width="35%" mode="popup" position="center,center" >
+            <div align="center" width="100%" height="100%">
+                <image sclass="imagem" align="left" src="images/LEDS.png" width="30%" height="20%" border="normal"/>
+                    
+                <div align="left" height="100%">
+                    <separator/>
+                    <label value="Tibico" style="font-size:40px; font-weight: bold;"/>
+				
+                    <separator height="0.5px"/>
+                    <label value="Sistema de Registro Acadêmico" style="font-size:12px;"/>
+				
+                    <separator height="10px"/>
+                    <label value="Copyright © 2012 LEDS - IFES." style="font-size:12px;"/>
+				
+                    <separator height="1px"/>
+                    <label value="Todos os direitos reservados." style="font-size:12px;"/>
+				
+                    <separator height="10px"/>
+                    <label value="O Tibico é desenvolvido pelo LEDS, um projeto composto por alunos de graduação e professores do IFES (Instituto Federal do Espírito Santo)." style="font-size:12px; text-align:justify; text-justify:inter-word;"/>
+                </div>
+            </div>
+        </window>
+    </div>
+    
+</zk>

@@ -1,0 +1,42 @@
+<?page title="Formulário Avaliação"?>
+
+<zk>
+    <div align="center">
+        <window id="winFormularioAvaliacao" title="Página Formulário Avaliação" border="normal" mode="modal" width="30%"
+                sclass="windowStyle" apply = "academico.controlepauta.cih.PagFormularioAvaliacao">
+
+            <separator height="15px" />
+            <grid>
+                <columns>
+                    <column width="30%"/>
+                    <column width="70%"/>
+                </columns>
+                <rows>
+						
+                    <row>
+                        Turma:
+                        <textbox id="turma" width="90%"/>
+                    </row>
+						
+                    <row>
+                        Nome da Avaliação:
+                        <textbox id="nomeAvaliacao" width="20%"/>
+                    </row>
+						
+                    <row>
+                        Peso:
+                        <intbox id="peso" width="8%"/>
+                    </row>
+						
+                </rows>
+            </grid>
+
+            <separator/>
+            <button  id="salvar" label="Salvar" onClick="" />
+            <button  id="voltar" label="Voltar" onClick="" />
+	    <style src="/information.css"/> 	
+        </window>
+    </div>
+</zk>
+
+

@@ -1,0 +1,62 @@
+<?page title="Eventos Disciplina"?>
+
+<zk>
+    <window title="Discilplina Cadastradas" border="normal" closable="true" sclass="windowStyle"
+            width="50%" id="winEventosDisciplina" apply ="academico.controleinterno.cih.PagEventosDisciplina">
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+
+            <menubar>
+                <menuitem tooltiptext="Incluir uma Disciplina"
+                          label="Incluir" width="20%" id="incluirDisciplina"/>
+                <menuitem tooltiptext="Alterar uma Disciplina"
+                          label="Alterar" width="20%" id="alterarDisciplina"/>
+                <menuitem tooltiptext="Consultar uma Disciplina"
+                          label="Consultar" width="20%" id="consultarDisciplina"/>
+                <menuitem tooltiptext="Excluir uma Disciplina"
+                          label="Excluir" width="20%" id="excluirDisciplina"/>
+            </menubar>
+            <grid>
+                <columns>
+                    <column   width="10%"/>
+                    <column  width="90%"/>
+					
+                </columns>
+                <rows>
+                    <row>
+                        Curso:
+								
+                        <combobox id="cursoCombo" width="50%"/>
+								
+                    </row>
+                </rows>
+            </grid>
+            
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+            
+            <separator />
+            <separator />
+
+            <auxhead>
+                <auxheader align="center"
+                           label="Discilplina Cadastradas" />
+            </auxhead>
+
+            <separator />
+
+            <listbox id="listDisciplina" mold="paging">
+                <listhead>
+                    <listheader align="center" label="Nome" />
+                    <listheader align="center" label="Curso" />
+                    <listheader align="center" label="Carga Horária" />
+                </listhead>
+            </listbox>
+        </div>
+        <style src="/information.css"/>
+    </window>
+   
+</zk>
+
+

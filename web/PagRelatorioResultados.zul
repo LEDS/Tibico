@@ -1,0 +1,77 @@
+<?page title="Relatório Resultados"?>
+
+<zk>
+
+    
+    <window title="Página Resultados" border="normal" closable="true" sclass="windowStyle"
+            width="50%" id="winResultados" apply="academico.controlepauta.cih.PagRelatorioResultados">
+	
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+            <grid>
+                <columns>
+                    <column width="20%" label=""/>
+                    <column width="80%" label=""/>
+                </columns>
+                <rows style="background:#FFFFFF;">
+					
+                    <row>			
+                        Curso: 		 
+                        <combobox id="curso" width="50%"/>
+                    </row>
+					
+					
+                    <row>
+                        Calendário Acadêmico:
+                        <combobox id="calendarioAcademico"/>	
+                    </row>
+					
+                    <row>
+                        Turma:
+                        <combobox id="turma" width="50%"/>	
+                    </row>
+                    <row>
+                        Média da Turma: 
+                        <label id="media" width="25%"/>
+                    
+                    </row>
+													
+										
+                </rows>
+            </grid>
+			
+            <separator height="10px"/>
+				
+            <auxhead>
+                <auxheader align="center"
+                           label="Relatório de Resultados" />
+            </auxhead>
+
+            <separator />
+
+            <grid id = "matriculas" >
+                <columns>
+                    <column align="center" label="Matrícula" width="20%"/>
+                    <column align="center" label="Nome" width="40%"/>
+                    <column align="center" label="Frequência (%)" width="15%"/>
+                    <column align="center" label="Nota Final" width="8%" />
+                    <column align="center" label="Situação" width="19%" />
+					
+					
+                </columns>
+
+				
+            </grid>
+	
+            <separator height="8px"/>
+        </div>
+        <button id="gerarGrafico" label="Gerar Gráfico" width="10%"  disabled="true"/>
+        <button id="gerarPdf" label="Gerar PDF" width="10%" disabled="true"/>
+        <style src="/information.css"/>
+    </window>
+</zk>
+
+

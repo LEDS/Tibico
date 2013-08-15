@@ -1,0 +1,45 @@
+<?page title="Eventos Turma"?>
+
+<zk>
+	
+    <window id="winEventosTurma" title="Alocação de Professor" border="normal" closable="true"
+            width="50%" apply = "academico.controleinterno.cih.PagEventosTurma" sclass="windowStyle">
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+
+            <menubar>
+				
+                <menuitem id="alterar" tooltiptext="Alocar Professor" label="Alocar"
+					/>
+				
+            </menubar>
+                        
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+                        
+            <separator />
+            <separator />
+
+            <auxhead>
+                <auxheader align="center" label="Turmas Cadastradas" />
+            </auxhead>
+
+            <separator />
+                        
+            <listbox id = "listbox" mold="paging">
+                <listhead>
+                    <listheader align="center" label="Curso"/>
+                    <listheader align="center" label="Disciplina"/>
+                    <listheader align="center" label="Calendário"/>
+                    <listheader align="center" label="Professor"/>
+                </listhead>
+
+            </listbox>
+                        
+        </div>
+        <style src="/information.css"/>
+    </window>
+	
+
+</zk>

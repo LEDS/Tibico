@@ -1,0 +1,54 @@
+<?page title="Eventos Matrícula"?>
+
+<zk>
+
+    
+    <window title="Disciplinas Matriculadas" border="normal" closable="true" sclass="windowStyle"
+            width="50%" id="winEventosMatricula" apply = "academico.controlepauta.cih.PagEventosMatricula">
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+
+            <div align="left">
+                <space width="10px"/>	
+                Aluno: 
+				 
+                <combobox id="nomeAluno" width="50%" autocomplete="true" autodrop="true" buttonVisible="true"/>
+			
+            </div>
+            <separator height="35px"/>
+
+            <menubar>
+                <menuitem  tooltiptext="Efetuar Matrícula"
+                           label="Matricular" id="matricular"/>
+                <menuitem tooltiptext="Cancela Matrícula"
+                          label="Desmatricular" id="desmatricular" />
+            </menubar>
+            
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+            
+            <separator />
+            <separator />
+
+            <auxhead>
+                <auxheader align="center"
+                           label="Disciplinas Matriculadas" />
+            </auxhead>
+
+            <separator />
+
+            <listbox id="listbox" mold="paging">
+                <listhead>
+                    <listheader align="center" label="Nome"/>
+                    <listheader align="center" label="Período"/>
+                    <listheader align="center" label="Professor"/>
+                </listhead>
+            </listbox>
+
+        </div>
+        <style src="/information.css"/>
+    </window>
+</zk>
+
+

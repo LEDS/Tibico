@@ -1,0 +1,66 @@
+<?page title="Eventos Turma"?>
+
+<zk>
+	
+    <window id="winEventosTurma" title="Turmas Cadastradas" border="normal" closable="true"
+            width="50%" apply = "academico.controleinterno.cih.PagEventosTurma" sclass="windowStyle">
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+
+            <menubar>
+                <menuitem id="incluir" tooltiptext="Incluir uma turma" label="Incluir"
+                          width="20%" />
+                <menuitem id="alterar" tooltiptext="alterar uma turma" label="Alterar"
+                          width="20%" />
+                <menuitem id="consultar" tooltiptext="consultar uma turma"
+                          label="Consultar" width="20%" />
+                <menuitem id="excluir" tooltiptext="excluir uma turma" label="Excluir"
+                          width="20%" />
+            </menubar>
+                        
+            <grid>
+                <columns>
+                    <column label="" width="5%"/>
+                    <column label="" width="65%"/>
+                    <column label="" width="30%"/>
+                </columns>
+                <rows>
+      
+                    <row>
+                        <label value=""/>
+                        <label value=""/>
+                        <textbox  id="pesquisarNome" width="100%" instant="true" value="Pesquisar"/>
+                    </row>
+                      
+                </rows>
+            </grid>
+            
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+                        
+            <separator />
+            <separator />
+
+            <auxhead>
+                <auxheader align="center" label="Turmas Cadastradas" />
+            </auxhead>
+
+            <separator />
+                        
+            <listbox id = "listbox" mold="paging">
+                <listhead>
+                    <listheader align="center" label="Curso"/>
+                    <listheader align="center" label="Disciplina"/>
+                    <listheader align="center" label="Calendário"/>
+                    <listheader align="center" label="Professor"/>
+                </listhead>
+
+            </listbox>
+                        
+        </div>
+        <style src="/information.css"/>
+    </window>
+	
+
+</zk>

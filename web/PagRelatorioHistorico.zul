@@ -1,0 +1,69 @@
+<?page title="Histórico" contentType="text/html;charset=UTF-8"?>
+<zk>
+    
+    <window title="Histórico" id="winHistorico" position="center" sclass="windowStyle"
+            closable="true" border="normal" width="60%" apply="academico.controlepauta.cih.PagRelatorioHistorico">
+            
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+            
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+            
+            <separator/>
+            <grid>
+                <columns>
+                    <column width="20%"/>
+                    <column width="20%"/>
+                    <column width="70%"/>
+                </columns>
+                <rows>
+					
+                    <row>
+                        Aluno:
+                        <textbox id="matricula" width="98%" />
+		
+                        <combobox id="nome" width="80%" autocomplete="true"
+                                  autodrop="true" buttonVisible="true" />
+                    </row>
+					
+                </rows>
+            </grid>
+            <separator/>
+            <grid>
+                <columns>
+                    <column width="20%"/>
+                    <column width="80%"/>
+                    <column width="20%"/>
+                    <column width="30%"/>
+                </columns>
+                <rows style="background:#FFFFFF;">
+                    <row>
+                        Curso:
+                        <label id="curso" width="98%"/>  
+                        Coeficiente:
+                        <label id="coeficiente" width="98%"/> 
+                    </row>
+					
+                    <row style="background:#FFFFFF;">
+                        Disciplinas Cursadas:
+                        <cell colspan="3">
+                            <grid id="disciplinas">
+                                <columns>
+                                    <column label="Disciplina" width="50%" align="center"/>
+                                    <column label="Frequência (%)" width="16%" align="center"/>
+                                    <column label="Nota" width="15%" align="center"/>
+                                    <column label="Situacão" width="19%" align="center"/>
+                                </columns>
+                            </grid>
+                        </cell>
+                    </row> 
+                </rows>
+            </grid>
+        </div> 
+        <button id="gerarPdf" label="Gerar PDF" width="10%" disabled="true"/>
+        <style src="/information.css"/>
+    </window>
+    
+</zk>

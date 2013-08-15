@@ -1,0 +1,138 @@
+
+<zk>
+    <style>
+        .breeze .complex-layout, .breeze .complex-layout .z-south,
+        .breeze .complex-layout .z-west { background: #F7F7F7; }
+        .z-borderlayout { background: #FFFFFF } .complex-layout .z-north
+        { background: #008BB6; } img.complex-layout-header-img {
+        padding: 0 10px; } .inner-border, .inner-border
+        .z-north, .inner-border .z-west, .inner-border .z-south,
+        .inner-border .z-east { background: #FFFFFF; } .dl-link {
+        text-decoration: none; cursor: pointer; }
+        .container{
+        position:relative;
+        }
+        .clr{
+        clear: both;
+        }
+        .content{
+        position:relative;
+        }
+        /* Header Style */
+        .header{
+        font-family:'Arial Narrow', Arial, sans-serif;
+        line-height: 24px;
+        font-weight:bold; 
+        font-size:12px; 
+        color:white;
+        position: relative;
+        }
+        .header span.right{
+        float: right;
+        }
+    </style>
+    <div id="div" apply="academico.controlepauta.cih.PagPrincipal">
+        <borderlayout id="telaprincipal" sclass="complex-layout">
+            <north id="north" border="0">
+                <div class="container">
+                    <div class="header">
+                        <space width="2px"/>
+                        <label id="nomeUsuario" value="" style="font-weight:bold; font-size:12px; color:white"/>
+                        <span class="right">
+                            <image id="logout" src="images/logout.png" width="16"  height="20" style="cursor:pointer;" tooltiptext="logout"/>
+                            <space width="2px"/>
+                        </span>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+            </north>
+			<!-- Sidebar -->
+            <west id="west" title=" " border="0" flex="true" splittable="true" collapsible="true"
+                  margins="0,5,0,0" autoscroll="true">
+                <vlayout id="vlayout" spacing="0">
+                    <panel id="cadastroAcademico" width="100%" border="normal"
+                            title="Cadastro Acadêmico">
+                        <panelchildren style="padding:5px;">
+                            <vbox>
+                                <toolbarbutton id="curso" label="Curso" />
+                                <toolbarbutton id="disciplina" label="Disciplina" />
+                                <toolbarbutton id="calendario" label="Calendário" />
+                                <toolbarbutton id="sala" label="Sala" />
+                            </vbox>
+                        </panelchildren>
+                    </panel>
+                    
+                    <panel id="cadastroPessoa" width="100%" border="normal"
+                           title="Cadastro Pessoa">
+                        <panelchildren style="padding:5px;">
+                            <vbox>
+                                <toolbarbutton id="cadastrarAluno" label="Aluno" />
+                                <toolbarbutton id="professor" label="Professor" />
+                            </vbox>
+                        </panelchildren>
+                    </panel>
+                    
+                    <panel id="controlarTurma" width="100%" border="normal"
+                           title="Controlar Turma">
+                        <panelchildren style="padding:5px;">
+                            <vbox>
+                                <toolbarbutton id="turma" label="Cadastrar Turma" />
+                                <toolbarbutton id="visualizarTurmas" label="Visualizar Turmas" />
+                                <toolbarbutton id="matricularAluno" label="Matricular Aluno" />
+                                <toolbarbutton id="alocarProfessor" label="Alocar Professor" />
+                            </vbox>
+                        </panelchildren>
+                    </panel>
+                    
+                    <panel id="pauta" width="100%" border="normal"
+                           title="Pauta">
+                        <panelchildren style="padding:5px;">
+                            <vbox>
+                                <toolbarbutton id="chamada" label="Chamada" />
+                                <toolbarbutton id="avaliacao" label="Avaliação" />
+                            </vbox>
+                        </panelchildren>
+                    </panel>
+                                        
+                    <panel id="relatorios" width="100%" border="normal"
+                           title="Relatórios">
+                        <panelchildren style="padding:5px;">
+                            <vbox>
+                                <toolbarbutton id="resultado" label="Resultados" />
+                                <toolbarbutton id="boletim" label="Boletim" />
+                                <toolbarbutton id="historico" label="Histórico" />
+                            </vbox>
+                        </panelchildren>
+                    </panel>
+                    <div align="center">
+                        <a href="http://200.137.75.208:8080/site/">
+                            <image src="images/LEDS.png" width="150px" height="155px" />
+                        </a>
+                    </div>
+                                        
+                </vlayout>
+            </west>
+			<!-- Content -->
+            <center>
+                <borderlayout id="border" sclass="inner-border">
+                    <center id="center" border="0" margins="0,3,3,3">
+                        <div align="center">
+                            <separator height="200px"/>
+                            <image src="images/tibico6.png" width="50%" height="30%"/>
+                                                <!-- Setar a janela selecionada aqui -->
+                        </div>
+                    </center>
+                </borderlayout>
+            </center>
+            <south id="south" border="0"
+                   style="background: none repeat scroll 0 0 ;">
+                <toolbar mold="panel" align="center">
+                    <toolbarbutton label="Home" href="http://200.137.75.208:8080/site/"/>
+                    <toolbarbutton id="about" label="About"/>
+                    <separator orient="vertical" bar="true" />
+                    Powered by LEDS - IFES
+                </toolbar>
+            </south>
+        </borderlayout>
+    </div>
+</zk>

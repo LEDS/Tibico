@@ -1,0 +1,65 @@
+<?page title="Eventos Professor"?>
+
+<zk>
+
+     
+    <window id="winDadosProfessor" title="Professor(es) Cadastrado(s)" border="normal" closable="true"
+            width="50%" apply = "academico.controleinterno.cih.PagEventosProfessor" sclass="windowStyle">
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+
+            <menubar>
+                <menuitem tooltiptext="Incluir um Professor"
+                          label="Incluir" width="20%" id="incluirProfessor"/>
+                <menuitem tooltiptext="Alterar um Professor"
+                          label="Alterar" width="20%" id="alterarProfessor"/>
+                <menuitem tooltiptext="Consultar um Professor"
+                          label="Consultar" width="20%" id="consultarProfessor"/>
+                <menuitem tooltiptext="Excluir um Professor"
+                          label="Excluir" width="20%" id="excluirProfessor"/>
+            </menubar>
+            <grid>
+                <columns>
+                    <column label="" width="5%"/>
+                    <column label="" width="65%"/>
+                    <column label="" width="30%"/>
+                </columns>
+                <rows>
+      
+                    <row>
+                        <label value=""/>
+                        <label value=""/>
+                        <textbox  id="pesquisarNome" width="100%" instant="true" value="Pesquisar"/>
+                    </row>
+                      
+                </rows>
+            </grid>
+            
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+            
+            <separator />
+            <separator />
+
+            <auxhead>
+                <auxheader align="center"
+                           label="Professor(es) Cadastrado(s)" />
+            </auxhead>
+
+            <separator />
+
+            <listbox id="listProfessor" mold="paging">
+                <listhead>
+                    <listheader align="center" label="Nome" />
+                    <listheader align="center" label="Grau de Instrução" />
+                </listhead>
+            </listbox>
+        </div>
+        <style src="/information.css"/>
+    </window>
+
+
+</zk>
+
+

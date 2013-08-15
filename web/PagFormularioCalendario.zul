@@ -1,0 +1,95 @@
+<?page title="Formulario Calendário" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <div align="center">
+        <window id="winFormularioCalendario" title="Página Formulário Calendário" sclass="windowStyle" border="normal" width="60%" apply="academico.controleinterno.cih.PagFormularioCalendario" mode="modal">
+            <separator />
+            <grid>
+                <columns>
+                    <column width="25%"/>
+                    <column width="25%"/>
+                    <column width="25%"/>
+                    <column width="25%"/>
+                </columns>
+                <rows>
+						
+                    <row>
+                        Curso:
+                        <cell colspan="3">
+                            <combobox id="curso" width="50%" readonly="true"/>
+                        </cell>
+                                                        
+                                                
+                                               
+						
+                    </row>
+                                        
+                    <row>							
+                        Identificador:
+                        <textbox id="identificador" width="30%" constraint="/[0-9][0-9][0-9][0-9][0-9]/: Entre com um identificador válido: 20121"/>
+                                                
+                        Duração:
+                        <textbox id="duracao" width="80%" maxlength="255"/>
+                                                        
+                    </row>
+                                        
+                                        
+						
+					
+                    <row>
+                        Início do Calendário Acadêmico:
+                        <datebox id="dataInicioCA" readonly="true" constraint="no empty"/>
+						
+                        Fim do Calendário Acadêmico:
+                        <datebox id="dataFimCA" readonly="true" constraint="no empty"/>				
+                    </row>
+					
+                    <row>
+                        Início do Período Matrícula:
+                        <datebox id="dataInicioPM" readonly="true" constraint="no empty"/>
+						
+                        Fim do Período Matrícula:
+                        <datebox id="dataFimPM" readonly="true" constraint="no empty"/>				
+                    </row>
+                    
+                    <row>
+                        Início do Período Letivo:
+                        <datebox id="dataInicioPL" readonly="true" constraint="no empty"/>
+						
+                        Fim do Período Letivo:
+                        <datebox id="dataFimPL" readonly="true" constraint="no empty"/>				
+                    </row>
+					
+                    
+					
+                    <row>
+                        <label  value="." style="font-family:comic sans ms; color:#f7f7f7"></label>
+                        <label  value="." style="font-family:comic sans ms; color:#f7f7f7"></label>
+                        <label  value="." style="font-family:comic sans ms; color:#f7f7f7"></label>
+                        <label  value="." style="font-family:comic sans ms; color:#f7f7f7"></label>
+                    </row>
+				
+                </rows>
+            </grid>
+
+            <separator />
+			
+            <button id="salvar" width="10%" label="Salvar" onClick=""></button>
+            <button id="voltar" width="10%" label="Voltar" onClick=""></button>
+	    <style src="/information.css"/> 					
+        </window>
+    </div>
+    <!-- 
+    <script type="text/javascript" src="/maskedinput-1.2.2.min.js" />
+    <script type="text/javascript" src="/watermarkinput.js" />
+    <script type="text/javascript">
+        zk.afterMount(function() {
+
+        jq("$duracao").Watermark(" semestral, bimestral, etc","gray");
+
+        jq("$identificador").mask(" 9999/9");
+
+
+        });
+    </script> -->
+    
+</zk>

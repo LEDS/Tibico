@@ -1,0 +1,59 @@
+<?page title="Eventos Avaliação"?>
+
+<zk>
+
+    <window id="winEventosAvaliacao" title="Avaliações Cadastradas" border="normal" closable="true"
+            width="50%" apply="academico.controlepauta.cih.PagEventosAvaliacao" sclass="windowStyle">
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+            <grid>
+                <columns>
+                    <column width="20%" label=""/>
+                    <column width="80%" label=""/>
+                </columns>
+                <rows>	
+                    <row>			
+                        Turma: 		 
+                        <combobox id="nome" width="50%"/>
+                    </row>	
+                </rows>
+            </grid>
+			
+			
+
+            <menubar>
+                <menuitem id="incluir" tooltiptext="Incluir Avaliação" label="Incluir"/>
+                <menuitem id="alterar" tooltiptext="Alterar Avaliação" label="Alterar"/>
+                <menuitem id="consultar" tooltiptext="Consultar Avaliação" label="Consultar"/>
+                <menuitem id="excluir" tooltiptext="Excluir Avaliação" label="Excluir"/>
+                <menuitem id="inserirPontuacao" tooltiptext="Inserir Pontuação" label="Inserir Pontuação"/>
+            </menubar>
+                        
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+                        
+            <separator />
+            <separator />
+
+            <auxhead>
+                <auxheader align="center"
+                           label="Avaliações Cadastradas" />
+            </auxhead>
+
+            <separator />
+                        
+            <listbox id = "listbox" mold="paging">
+                <listhead>
+                    <listheader label="Nome"/>
+                    <listheader label="Peso"/>
+                </listhead>
+
+            </listbox>
+        </div>
+        <style src="/information.css"/>
+    </window>
+
+</zk>
+
+

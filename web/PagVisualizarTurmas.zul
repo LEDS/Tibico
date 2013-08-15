@@ -1,0 +1,61 @@
+
+<zk>  
+    <window title="Visualizar Turmas" id="winVisualizarTurmas" border="normal" width="70%"
+                apply = "academico.controleinterno.cih.PagVisualizarTurmas" closable="true" sclass="windowStyle">
+        <div align="center">
+            <image src="images/tibico6.png" width="30%" height="20%"/>
+	    	
+            <grid>
+                <columns>
+                    <column label="" width="10%"/>
+                    <column label="" width="40%"/>
+                    <column label="" width="18%"/>
+                    <column label="" width="32%"/>
+                </columns>
+                <rows>
+					
+                    <row>
+                        Curso:
+                        <combobox id="curso" width="70%" readonly="true"/>	
+					
+                        Calendário Acadêmico:
+                        <combobox id="calendarioAcademico" width="70%" readonly="true"/>
+                    </row>
+					
+                    <row>
+                        Professor:
+                        <cell colspan="3">
+                            <combobox id="professor" width="25%" readonly="true"/>
+                        </cell>
+                    </row>
+					
+                </rows>
+            </grid>
+    		   			
+            <separator height="25px" />
+            
+            <div id="boxInformacao" class="" visible="false" tooltiptext="Clique para fechar">
+                <label id="msg" value=""/>
+            </div>
+            
+            <auxhead>
+                <auxheader align="center"
+                           label="Turmas Cadastradas" />
+            </auxhead>
+            
+            <separator height="10px" />	
+            <listbox id = "listbox" mold="paging" >
+                <listhead>
+                    <listheader label="Professor" width="29%" align="center"/>
+                    <listheader label="Turma" width="38%" align="center"/>
+                    <listheader label="Alunos" width="10%" align="center"/>
+                    <listheader label="Status" width="23%" align="center"/>
+                </listhead> 
+            </listbox>			
+            <separator/>
+        </div>
+        <style src="/information.css"/>
+    </window> 
+</zk>
+
+
